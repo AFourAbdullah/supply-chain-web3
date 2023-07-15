@@ -1,8 +1,8 @@
-const { ethers } = require("ethers");
-const hre = require("hardhat");
+// const { ethers } = require("ethers");
+const { ethers } = require("hardhat");
 
 async function main() {
-  const Tracking = await hre.ethers.getContractFactory("Tracking");
+  const Tracking = await ethers.getContractFactory("Tracking");
   const tracking = await Tracking.deploy();
   await tracking.deployed();
   console.log("deployed!");
